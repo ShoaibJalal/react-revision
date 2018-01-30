@@ -1,0 +1,27 @@
+.Danger {
+    color: brown;
+  }
+  .Bold {
+    font-weight: bold
+  }
+  .Cockpit button{
+    border: 1px solid red;
+    padding: 16px;
+    background-color: brown;
+    font: inherit;
+    color: azure;
+    cursor: pointer;
+  }
+  .Cockpit button:hover{
+    background-color: salmon;
+    border: 2px solid sandybrown;
+    color: black;
+  }
+  .Cockpit button.Green{
+    background-color: green;
+  }
+  
+  .Cockpit button.Green:hover{
+    background-color: lightseagreen;
+    color: black;
+  }
