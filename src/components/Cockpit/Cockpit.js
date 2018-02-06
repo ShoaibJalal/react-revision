@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import classes from './Cockpit.css';
 
 const cockpit = (props) => {
 
     let implementedClasses = [];
-    let btnClass = '';
+    let btnClass = classes.Button;
     if(props.showPersons){
-        btnClass = classes.Green;
+        btnClass = [classes.Button,classes.Green].join(' ');
     }
     
     if(props.persons.length <= 2){
@@ -18,13 +18,13 @@ const cockpit = (props) => {
 
 
     return(
-        <div className={classes.Cockpit}>
+        <Fragment>
         <h1>{props.appTitle}</h1>
         <p className = {implementedClasses.join(' ')}>This is really working!</p>
         <button
           className = {btnClass} 
           onClick={props.clicked}>Toggle Persons</button>
-         </div> 
+         </Fragment> 
     );
 }
 export default cockpit;
